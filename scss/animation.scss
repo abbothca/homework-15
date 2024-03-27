@@ -1,0 +1,21 @@
+@keyframes ping {
+	0% {
+		opacity: 1;
+		transform: scale(0.2) translate(0, 0vh);
+	}
+
+	40% {
+		opacity: 0.5;
+		transform: scale(1) translate(150px, -50vh);
+	}
+
+	80% {
+		opacity: 0.4;
+		transform: scale(1.2) translate(0, -70vh);
+	}
+
+	100% {
+		opacity: 0.3;
+		transform: scale(2.2) translate(-150px, -100vh);
+	}
+}
