@@ -1,0 +1,417 @@
+@keyframes ping {
+  0% {
+    opacity: 1;
+    transform: scale(0.2) translate(0, 0vh);
+  }
+  40% {
+    opacity: 0.5;
+    transform: scale(1) translate(150px, -50vh);
+  }
+  80% {
+    opacity: 0.4;
+    transform: scale(1.2) translate(0, -70vh);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(2.2) translate(-150px, -100vh);
+  }
+}
+*,
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: rgb(85, 142, 212);
+  z-index: 1;
+}
+body::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  z-index: -1;
+  background-image: url(../img/underwater-fish-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover 100%;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  position: relative;
+  z-index: 5;
+  width: fit-content;
+  padding: 30px 50px;
+  margin: 10px auto;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.title p {
+  font-weight: 100;
+  letter-spacing: 0.9px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+}
+.element:nth-of-type(1) {
+  left: 62.1vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8800ms;
+  animation-delay: -500ms;
+}
+.element:nth-of-type(2) {
+  left: 34.02vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(3) {
+  left: 75.06vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(4) {
+  left: 39.78vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -1000ms;
+}
+.element:nth-of-type(5) {
+  left: 23.85vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7600ms;
+  animation-delay: -200ms;
+}
+.element:nth-of-type(6) {
+  left: 69.66vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -100ms;
+}
+.element:nth-of-type(7) {
+  left: 77.67vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -1000ms;
+}
+.element:nth-of-type(8) {
+  left: 63vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -900ms;
+}
+.element:nth-of-type(9) {
+  left: 25.56vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7600ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(10) {
+  left: 3.24vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -800ms;
+}
+.element:nth-of-type(11) {
+  left: 59.22vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(12) {
+  left: 75.24vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(13) {
+  left: 89.37vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -1000ms;
+}
+.element:nth-of-type(14) {
+  left: 49.86vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(15) {
+  left: 84.33vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8200ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(16) {
+  left: 72.45vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8800ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(17) {
+  left: 59.67vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -500ms;
+}
+.element:nth-of-type(18) {
+  left: 74.97vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5200ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(19) {
+  left: 28.71vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(20) {
+  left: 1.26vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(21) {
+  left: 40.77vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8800ms;
+  animation-delay: -800ms;
+}
+.element:nth-of-type(22) {
+  left: 83.25vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(23) {
+  left: 79.65vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -500ms;
+}
+.element:nth-of-type(24) {
+  left: 26.55vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 9400ms;
+  animation-delay: -500ms;
+}
+.element:nth-of-type(25) {
+  left: 25.74vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -900ms;
+}
+.element:nth-of-type(26) {
+  left: 62.82vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(27) {
+  left: 18.63vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(28) {
+  left: 69.75vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(29) {
+  left: 8.37vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8200ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(30) {
+  left: 80.91vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -1000ms;
+}
+.element:nth-of-type(31) {
+  left: 43.47vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8200ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(32) {
+  left: 13.14vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8800ms;
+  animation-delay: -200ms;
+}
+.element:nth-of-type(33) {
+  left: 86.58vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(34) {
+  left: 42.75vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8200ms;
+  animation-delay: -100ms;
+}
+.element:nth-of-type(35) {
+  left: 24.84vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7600ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(36) {
+  left: 75.51vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7600ms;
+  animation-delay: -300ms;
+}
+.element:nth-of-type(37) {
+  left: 32.22vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(38) {
+  left: 32.58vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -800ms;
+}
+.element:nth-of-type(39) {
+  left: 69.03vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 5800ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(40) {
+  left: 0.45vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -800ms;
+}
+.element:nth-of-type(41) {
+  left: 80.1vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -700ms;
+}
+.element:nth-of-type(42) {
+  left: 33.93vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -1000ms;
+}
+.element:nth-of-type(43) {
+  left: 32.67vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 6400ms;
+  animation-delay: -100ms;
+}
+.element:nth-of-type(44) {
+  left: 16.2vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(45) {
+  left: 2.07vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 9400ms;
+  animation-delay: -400ms;
+}
+.element:nth-of-type(46) {
+  left: 32.31vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 8800ms;
+  animation-delay: -600ms;
+}
+.element:nth-of-type(47) {
+  left: 51.57vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -200ms;
+}
+.element:nth-of-type(48) {
+  left: 72vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 10000ms;
+  animation-delay: -500ms;
+}
+.element:nth-of-type(49) {
+  left: 64.53vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 7000ms;
+  animation-delay: -800ms;
+}
+.element:nth-of-type(50) {
+  left: 75.15vw;
+  animation: ping ease 0s infinite normal forwards;
+  animation-duration: 4600ms;
+  animation-delay: -800ms;
+}
+.element.circle {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+}
+.element.clicked {
+  opacity: 1;
+  z-index: 2;
+}
+.element.not-clicked {
+  animation: none;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 1px solid #172360;
+  font-size: 12px;
+}
+
+.sourse {
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  width: 100vw;
+}
+
+/*# sourceMappingURL=style.css.map */

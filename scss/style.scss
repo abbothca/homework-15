@@ -1,0 +1,110 @@
+@use "./helper/variables.scss" as *;
+@use "./helper/mixin.scss" as mixin;
+@use "./animation.scss";
+
+*,
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: $color-main;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        inset: 0;
+        z-index: -1;
+        background-image: url(../img/underwater-fish-icon.svg);
+        background-repeat: no-repeat;
+        background-size: cover 100%;
+        background-position: center;
+    }
+}
+
+h1{
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    position: relative;
+    z-index: 5;
+    width: fit-content;
+    padding: 30px 50px;
+    margin: 10px auto;
+    color: $color-balls;
+    @include mixin.glass;
+
+    p{
+        font-weight: 100;
+        letter-spacing: 0.9px;
+    }
+}
+
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+
+    @for $i from 1 through $max-count-balls {
+        &:nth-of-type(#{$i}) {
+            left: calc(random(1000) / 1000 * 90vw);
+            animation: ping ease 0s infinite normal forwards;
+            animation-duration: random(10) * 600 + 4*$time + ms;
+            animation-delay: - random(10) * 100 + ms;
+        }
+    }
+
+    &.circle {
+        width: $size-ball;
+        height: $size-ball;
+        font-size: 16px;
+    }
+
+    &.clicked {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    &.not-clicked {
+        animation: none;
+        opacity: 0.6;
+        z-index: -1;
+    }
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $size-small-ball;
+    height: $size-small-ball;
+    background-color: $color-balls;
+    border-radius: $size-ball;
+    border: 1px solid $color-text;
+    font-size: 12px;
+}
+
+.sourse {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    width: 100vw;
+}
