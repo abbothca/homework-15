@@ -57,7 +57,20 @@ class Bubble {
     }
 }
 
-class BadBubble extends Bubble {
+class SpecialBubbles extends Bubble {
+    constructor(className) {
+        super(className);
+    }
+
+    showClick() {
+        console.group("click");
+        console.log("You clicked special bubble!");
+        console.table(this);
+        console.groupEnd();
+    }
+}
+
+class BadBubble extends SpecialBubbles {
     #color = "#c05353";
     #timeDelay;
     lastNulledScore;
@@ -78,8 +91,9 @@ class BadBubble extends Bubble {
     }
 
 
-    addClickListener(gameObject) {
+    addClickListener(gameObject) {        
         this.link.addEventListener("click", (event) => {
+            this.showClick();
             this.color();
             this.resetAll(gameObject);
             let newBadOne = this.#createNewBadBubble();
@@ -106,7 +120,7 @@ class BadBubble extends Bubble {
     }
 }
 
-class GoodBubble extends Bubble {
+class GoodBubble extends SpecialBubbles {
     color;
     #timeDelay = 500;
     #specialScore;
@@ -134,6 +148,7 @@ class GoodBubble extends Bubble {
 
     addClickListener(gameObject) {
         this.link.addEventListener("click", (event) => {
+            this.showClick();
             const newOne = this.#createNewBubble();
             newOne.addClickListener(gameObject);
             gameObject.balls.push(newOne);
