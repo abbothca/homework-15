@@ -91,10 +91,10 @@ class BadBubble extends SpecialBubbles {
     }
 
 
-    addClickListener(gameObject) {        
+    addClickListener(gameObject) {
         this.link.addEventListener("click", (event) => {
             this.showClick();
-            this.color();
+            this.changeColor();
             this.resetAll(gameObject);
             let newBadOne = this.#createNewBadBubble();
             newBadOne.addClickListener(gameObject);
@@ -112,7 +112,7 @@ class BadBubble extends SpecialBubbles {
 
     }
 
-    color() {
+    changeColor() {
         document.body.style.backgroundColor = this.#color;
         setTimeout(() => {
             document.body.style = "";
@@ -170,22 +170,13 @@ class Game {
         this.#currentScore = 0;
         this.#maxBalls = MAX_COUNT_BALLS;
 
-        let goodBubbleNumber = +(startAmountBalls / 3).toFixed(0);
-        let badBubbleNumber = goodBubbleNumber + 1;
+        let randomBad = +(Math.random() * (startAmountBalls - 1)).toFixed(0);
+        let randomGood = Math.abs(startAmountBalls - 1 - randomBad - 1);
+        this.balls[randomBad] = new BadBubble("circle");
+        this.balls[randomGood] = new GoodBubble("circle");
 
         for (let i = 0; i < startAmountBalls; i++) {
-            if (i === badBubbleNumber) {
-                let badOne = new BadBubble("circle");
-                this.balls.push(badOne);
-                continue;
-            };
-            if (i === goodBubbleNumber) {
-                let goodOne = new GoodBubble("circle");
-                this.balls.push(goodOne);
-                continue;
-            };
-            let one = new Bubble("circle");
-            this.balls.push(one);
+            i !== randomGood && i !== randomBad ? this.balls[i] = new Bubble("circle") : "";
         }
 
         this.balls.forEach((element) => {
